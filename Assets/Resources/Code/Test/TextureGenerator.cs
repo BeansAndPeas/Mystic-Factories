@@ -3,8 +3,8 @@ using UnityEngine;
 namespace Resources.Code.Test {
     public static class TextureGenerator {
         // Height Map Colors
-        private static readonly Color DeepColor = new Color(15 / 255f, 30 / 255f, 80 / 255f, 1);
-        private static readonly Color ShallowColor = new Color(15 / 255f, 40 / 255f, 90 / 255f, 1);
+        public static readonly Color DeepColor = new Color(15 / 255f, 30 / 255f, 80 / 255f, 1);
+        public static readonly Color ShallowColor = new Color(15 / 255f, 40 / 255f, 90 / 255f, 1);
         private static readonly Color SandColor = new Color(198 / 255f, 190 / 255f, 31 / 255f, 1);
         private static readonly Color GrassColor = new Color(50 / 255f, 220 / 255f, 20 / 255f, 1);
         private static readonly Color ForestColor = new Color(16 / 255f, 160 / 255f, 0, 1);
@@ -101,16 +101,16 @@ namespace Resources.Code.Test {
             return texture;
         }
 
-        private static readonly Color Ice = Color.white;
-        private static readonly Color Desert = new Color(238 / 255f, 218 / 255f, 130 / 255f, 1);
-        private static readonly Color Savanna = new Color(177 / 255f, 209 / 255f, 110 / 255f, 1);
-        private static readonly Color TropicalRainforest = new Color(66 / 255f, 123 / 255f, 25 / 255f, 1);
-        private static readonly Color Tundra = new Color(96 / 255f, 131 / 255f, 112 / 255f, 1);
-        private static readonly Color TemperateRainforest = new Color(29 / 255f, 73 / 255f, 40 / 255f, 1);
-        private static readonly Color Grassland = new Color(164 / 255f, 225 / 255f, 99 / 255f, 1);
-        private static readonly Color SeasonalForest = new Color(73 / 255f, 100 / 255f, 35 / 255f, 1);
-        private static readonly Color BorealForest = new Color(95 / 255f, 115 / 255f, 62 / 255f, 1);
-        private static readonly Color Woodland = new Color(139 / 255f, 175 / 255f, 90 / 255f, 1);
+        public static readonly Color Ice = Color.white;
+        public static readonly Color Desert = new Color(238 / 255f, 218 / 255f, 130 / 255f, 1);
+        public static readonly Color Savanna = new Color(177 / 255f, 209 / 255f, 110 / 255f, 1);
+        public static readonly Color TropicalRainforest = new Color(66 / 255f, 123 / 255f, 25 / 255f, 1);
+        public static readonly Color Tundra = new Color(96 / 255f, 131 / 255f, 112 / 255f, 1);
+        public static readonly Color TemperateRainforest = new Color(29 / 255f, 73 / 255f, 40 / 255f, 1);
+        public static readonly Color Grassland = new Color(164 / 255f, 225 / 255f, 99 / 255f, 1);
+        public static readonly Color SeasonalForest = new Color(73 / 255f, 100 / 255f, 35 / 255f, 1);
+        public static readonly Color BorealForest = new Color(95 / 255f, 115 / 255f, 62 / 255f, 1);
+        public static readonly Color Woodland = new Color(139 / 255f, 175 / 255f, 90 / 255f, 1);
 
         public static Texture2D GetBiomeMapTexture(int width, int height, Tile[,] tiles) {
             var texture = new Texture2D(width, height);
@@ -139,11 +139,11 @@ namespace Resources.Code.Test {
                         }
                     };
 
-                    // add a outline
+                    /*// add a outline
                     if (tiles[x, y].HeightType < HeightType.Shore) continue;
 
                     if (tiles[x, y].BiomeBitmask != 15)
-                        pixels[x + y * width] = Color.Lerp(pixels[x + y * width], Color.black, 0.35f);
+                        pixels[x + y * width] = Color.Lerp(pixels[x + y * width], Color.black, 0.35f);*/
                 }
             }
 

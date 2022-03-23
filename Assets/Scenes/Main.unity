@@ -275,7 +275,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &161728938
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -372,7 +372,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &496680145
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -540,7 +540,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 1
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -564,7 +564,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
+  m_LocalPosition: {x: 3.21, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -698,7 +698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &762297135
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -861,6 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1731218026}
   - component: {fileID: 1731218027}
+  - component: {fileID: 1731218028}
   m_Layer: 0
   m_Name: World
   m_TagString: Untagged
@@ -876,7 +877,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1731218025}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.1988783, y: 0.21099925, z: -16.633127}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -899,22 +900,22 @@ MonoBehaviour:
   terrainOctaves: 6
   terrainFrequency: 1.25
   deepWater: 0.2
-  shallowWater: 0.4
-  sand: 0.5
-  grass: 0.7
+  shallowWater: 0.3
+  sand: 0.4
+  grass: 0.5
   forest: 0.8
-  rock: 0.9
+  rock: 0.95
   heatOctaves: 4
   heatFrequency: 3
   coldestValue: 0.05
   colderValue: 0.18
-  coldValue: 0.4
-  warmValue: 0.6
-  warmerValue: 0.8
+  coldValue: 0.6
+  warmValue: 0.8
+  warmerValue: 0.9
   moistureOctaves: 4
   moistureFrequency: 3
-  dryerValue: 0.27
-  dryValue: 0.4
+  dryerValue: 0.1
+  dryValue: 0.2
   wetValue: 0.6
   wetterValue: 0.8
   wettestValue: 0.9
@@ -922,6 +923,20 @@ MonoBehaviour:
   heatMapRenderer: {fileID: 496680146}
   moistureMapRenderer: {fileID: 161728939}
   biomeMapRenderer: {fileID: 540457909}
+--- !u!114 &1731218028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731218025}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b15b169f348248b9a4ffd6dcfee9e090, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  biomeMapRenderer: {fileID: 540457909}
+  tilePrefab: {fileID: 3385668168729331550, guid: 8b3f8958645a3404f89169323bc78eb3, type: 3}
 --- !u!1 &1740953021
 GameObject:
   m_ObjectHideFlags: 0

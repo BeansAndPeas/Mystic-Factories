@@ -14,7 +14,7 @@ namespace Resources.Code {
 
         private void Update() {
             var movement = masterInput.Camera.Movement.ReadValue<Vector2>();
-            transform.position += new Vector3(movement.x, movement.y, 0) * 10 * Time.deltaTime;
+            transform.position += new Vector3(movement.x, movement.y, 0) * 2.5f * Time.deltaTime;
         }
     }
 }

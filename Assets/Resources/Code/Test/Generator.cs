@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using AccidentalNoise;
 using UnityEngine;
@@ -99,21 +100,30 @@ namespace Resources.Code.Test {
 
         private void Start() {
             seed = Random.Range(0, int.MaxValue);
+            StartCoroutine(GenerateWorld());
+        }
 
+        private IEnumerator GenerateWorld() {
             Initialize();
+            yield return new WaitForSeconds(0.5f);
             GetData();
+            yield return new WaitForSeconds(0.5f);
             LoadTiles();
-
+            yield return new WaitForSeconds(0.5f);
             UpdateNeighbors();
-
+            yield return new WaitForSeconds(0.5f);
             FloodFill();
-
+            yield return new WaitForSeconds(0.5f);
             GenerateBiomeMap();
+            yield return new WaitForSeconds(0.5f);
             UpdateBiomeBitmask();
-
+            yield return new WaitForSeconds(0.5f);
             heightMapRenderer.materials[0].mainTexture = TextureGenerator.GetHeightMapTexture(width, height, tiles);
+            yield return new WaitForSeconds(0.5f);
             heatMapRenderer.materials[0].mainTexture = TextureGenerator.GetHeatMapTexture(width, height, tiles);
+            yield return new WaitForSeconds(0.5f);
             moistureMapRenderer.materials[0].mainTexture = TextureGenerator.GetMoistureMapTexture(width, height, tiles);
+            yield return new WaitForSeconds(0.5f);
             biomeMapRenderer.materials[0].mainTexture = TextureGenerator.GetBiomeMapTexture(width, height, tiles);
         }
 
