@@ -18,9 +18,9 @@ namespace Resources.Code {
         private IEnumerator GenerateWorld() {
             yield return new WaitForSeconds(10);
 
-            Texture2D texture = biomeMapRenderer.material.mainTexture as Texture2D;
-            int widthScaled = (int) ((texture.width / 2f) * 0.16f);
-            int heightScaled = (int) ((texture.height / 2f) * 0.16f);
+            var texture = biomeMapRenderer.material.mainTexture as Texture2D;
+            var widthScaled = (int) ((texture.width / 2f) * 0.16f);
+            var heightScaled = (int) ((texture.height / 2f) * 0.16f);
 
             for (var x = 0; x < texture.width; x++) {
                 for (var y = 0; y < texture.height; y++) {
@@ -35,7 +35,7 @@ namespace Resources.Code {
 
                     Tile tile = TileColorCache[color];
                     GameObject tileObj = Instantiate(tilePrefab, transform);
-                    tileObj.transform.position = new Vector2((x * .16f) - widthScaled, y * .16f - heightScaled);
+                    tileObj.transform.position = new Vector2(x * .16f - widthScaled, y * .16f - heightScaled);
                     
                     if (!TileSpriteCache.ContainsKey(tile)) {
                         TileSpriteCache.Add(tile, UnityEngine.Resources.Load<Sprite>("Textures/" + tile.Sprite));

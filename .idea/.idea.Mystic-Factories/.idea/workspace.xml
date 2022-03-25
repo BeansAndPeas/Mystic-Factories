@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbfa7e96-c1aa-4abd-83c9-d3b64611f811" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Template.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Template.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Tile.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/World.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +88,7 @@
       <workItem from="1647948635069" duration="13916000" />
       <workItem from="1648035374757" duration="11785000" />
       <workItem from="1648200477130" duration="2703000" />
-      <workItem from="1648205613018" duration="529000" />
+      <workItem from="1648205613018" duration="5204000" />
     </task>
     <servers />
   </component>
