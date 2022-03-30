@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Resources.Code {
     public class World : MonoBehaviour {
@@ -13,15 +14,12 @@ namespace Resources.Code {
         private readonly Dictionary<Color, Tile> TileColorCache = new Dictionary<Color, Tile>();
         private readonly Dictionary<Tile, Sprite> TileSpriteCache = new Dictionary<Tile, Sprite>();
 
-        private void Start() => StartCoroutine(GenerateWorld());
-
-        private IEnumerator GenerateWorld() {
-            yield return new WaitForSeconds(10);
-
+        internal IEnumerator GenerateWorld(Image loadingBar) {
             var texture = biomeMapRenderer.material.mainTexture as Texture2D;
             var widthScaled = (int) ((texture.width / 2f) * 0.16f);
             var heightScaled = (int) ((texture.height / 2f) * 0.16f);
 
+            float complete = 0;
             for (var x = 0; x < texture.width; x++) {
                 for (var y = 0; y < texture.height; y++) {
                     if (y % 64 == 0)
@@ -40,14 +38,17 @@ namespace Resources.Code {
                     if (!TileSpriteCache.ContainsKey(tile)) {
                         TileSpriteCache.Add(tile, UnityEngine.Resources.Load<Sprite>("Textures/" + tile.Sprite));
                     }
+                    
                     tileObj.GetComponent<SpriteRenderer>().sprite = TileSpriteCache[tile];
                     
                     tileObj.name = tile.Name;
                     tiles.Add(new TilePos(x, y), tileObj);
+                    loadingBar.fillAmount = Mathf.Lerp(0.2f, 1f, complete++ / (texture.width * texture.height));
                 }
             }
 
             biomeMapRenderer.gameObject.SetActive(false);
+            UIController.FinishedGenerating = true;
         }
 
         public GameObject GetTile(int x, int y) {

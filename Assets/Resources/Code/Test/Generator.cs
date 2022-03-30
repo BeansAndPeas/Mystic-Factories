@@ -2,7 +2,9 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using AccidentalNoise;
+using JetBrains.Annotations;
 using UnityEngine;
+using UnityEngine.UI;
 using Random = UnityEngine.Random;
 
 // http://www.jgallant.com/procedurally-generating-wrapping-world-maps-in-unity-csharp-part-1
@@ -100,31 +102,41 @@ namespace Resources.Code.Test {
 
         private void Start() {
             seed = Random.Range(0, int.MaxValue);
-            StartCoroutine(GenerateWorld());
         }
 
-        private IEnumerator GenerateWorld() {
+        public IEnumerator GenerateWorld(Image loadingBar) {
             Initialize();
+            loadingBar.fillAmount = 0.07f;
             yield return new WaitForSeconds(0.5f);
             GetData();
+            loadingBar.fillAmount = 0.08f;
             yield return new WaitForSeconds(0.5f);
             LoadTiles();
+            loadingBar.fillAmount = 0.09f;
             yield return new WaitForSeconds(0.5f);
             UpdateNeighbors();
+            loadingBar.fillAmount = 0.1f;
             yield return new WaitForSeconds(0.5f);
             FloodFill();
+            loadingBar.fillAmount = 0.12f;
             yield return new WaitForSeconds(0.5f);
             GenerateBiomeMap();
+            loadingBar.fillAmount = 0.13f;
             yield return new WaitForSeconds(0.5f);
             UpdateBiomeBitmask();
+            loadingBar.fillAmount = 0.1475f;
             yield return new WaitForSeconds(0.5f);
             heightMapRenderer.materials[0].mainTexture = TextureGenerator.GetHeightMapTexture(width, height, tiles);
+            loadingBar.fillAmount = 0.16f;
             yield return new WaitForSeconds(0.5f);
             heatMapRenderer.materials[0].mainTexture = TextureGenerator.GetHeatMapTexture(width, height, tiles);
+            loadingBar.fillAmount = 0.17f;
             yield return new WaitForSeconds(0.5f);
             moistureMapRenderer.materials[0].mainTexture = TextureGenerator.GetMoistureMapTexture(width, height, tiles);
+            loadingBar.fillAmount = 0.18f;
             yield return new WaitForSeconds(0.5f);
             biomeMapRenderer.materials[0].mainTexture = TextureGenerator.GetBiomeMapTexture(width, height, tiles);
+            loadingBar.fillAmount = 0.2f;
         }
 
         private void Initialize() {
@@ -363,7 +375,6 @@ namespace Resources.Code.Test {
         private void GenerateBiomeMap() {
             for (var x = 0; x < width; x++) {
                 for (var y = 0; y < height; y++) {
-
                     if (!tiles[x, y].Collidable) continue;
 
                     Tile t = tiles[x, y];
