@@ -5,12 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbfa7e96-c1aa-4abd-83c9-d3b64611f811" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/MapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Test/MapData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/MathHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Test/MathHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/TextureGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Test/TextureGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Test/Tile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/TileGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Test/TileGroup.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/World.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Tile.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Tile.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/camera_border.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/camera_border.png.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/resource_bar.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/resource_bar.png.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,12 +33,8 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f7f0a900fdf94a2a9316bb3d4c5aa3e8144200/44/c942fee0/WaitUntil.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -96,6 +99,7 @@
       <workItem from="1648200477130" duration="2703000" />
       <workItem from="1648205613018" duration="5204000" />
       <workItem from="1648628206088" duration="10328000" />
+      <workItem from="1648803432447" duration="4481000" />
     </task>
     <servers />
   </component>
@@ -125,14 +129,14 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="NONE" type="UnityPausepointType">
           <url>file://$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs</url>
-          <line>106</line>
+          <line>128</line>
           <log-expression expression="(UnityEditor.EditorApplication.isPaused = true) ? &quot;Unity pausepoint hit. Pausing Unity editor at the end of frame&quot; : &quot;Unable to pause Unity editor&quot;" />
           <properties documentPath="C:\temp\ryan\Mystic-Factories\Assets\Resources\Code\Test\Generator.cs" initialLine="106" containingFunctionPresentation="method 'GenerateWorld'">
             <startOffsets>
-              <option value="4343" />
+              <option value="5368" />
             </startOffsets>
             <endOffsets>
-              <option value="4344" />
+              <option value="5369" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="2" />
