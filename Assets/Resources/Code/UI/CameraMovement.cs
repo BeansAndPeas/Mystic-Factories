@@ -5,15 +5,15 @@ namespace Resources.Code {
     public class CameraMovement : MonoBehaviour {
         [SerializeField]
         private PlayerInput input;
-        private MasterInput masterInput;
+        public static MasterInput MasterInput;
 
         private void Awake() {
-            masterInput =  new MasterInput();
-            masterInput.Camera.Enable();
+            MasterInput =  new MasterInput();
+            MasterInput.Camera.Enable();
         }
 
         private void Update() {
-            var movement = masterInput.Camera.Movement.ReadValue<Vector2>();
+            var movement = MasterInput.Camera.Movement.ReadValue<Vector2>();
             transform.position += new Vector3(movement.x, movement.y, 0) * 2.5f * Time.deltaTime;
         }
     }
