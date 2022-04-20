@@ -1,4 +1,3 @@
-using System;
 using Resources.Code.Building;
 using UnityEngine;
 using UnityEngine.UI;
@@ -15,13 +14,15 @@ namespace Resources.Code.UI {
         public void Enable() {
             buildMode.gameObject.SetActive(false);
             buildPanel.SetActive(true);
-            BuildSystem.current.Initialize(testPrefab);
+            BuildSystem.Current.Initialize(testPrefab);
             Debug.Log("hi");
+            CameraMovement.MasterInput.Building.Enable();
         }
 
         public void Disable() {
             buildMode.gameObject.SetActive(true);
             buildPanel.SetActive(false);
+            CameraMovement.MasterInput.Building.Disable();
         }
     }
 }

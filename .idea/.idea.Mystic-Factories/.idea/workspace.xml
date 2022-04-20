@@ -5,78 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbfa7e96-c1aa-4abd-83c9-d3b64611f811" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/ObjectDrag.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/ObjectDrag.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/PlaceableObject.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/PlaceableObject.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/CameraMovement.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/CameraMovement.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/FPSCounter.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/FPSCounter.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/IDoubleClick.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/IDoubleClick.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/IMouse.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/IMouse.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/MouseHandler.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/MouseHandler.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/UIController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/UIController.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/Biome.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/Biome.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/BiomeList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/BiomeList.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/Tile.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/Tile.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/TileList.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/TileList.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/TilePos.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/TilePos.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/World.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/World.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GridItem.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/GridItem.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures/Test.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures/Test.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Structures.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Structures/test.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Structures/test.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Structures/white_tile.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Structures/white_tile.png.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Tilemap.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Tilemap/Base.prefab" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Tilemap/Base.prefab.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Tilemap/white_tile.asset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Resources/Tilemap/white_tile.asset.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/MasterInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.inputactions" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Biome.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Biome.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/BiomeList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/BiomeList.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/CameraMovement.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/CameraMovement.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/FPSCounter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/FPSCounter.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/ObjectDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/ObjectDrag.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/PlaceableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/PlaceableObject.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/MasterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/MasterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Tile.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Tile.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/TileList.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/TileList.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/TilePos.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/TilePos.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/UIController.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/UIController.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/World.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/World.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures/Test.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures/Test.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -93,9 +32,11 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -162,6 +103,8 @@
       <workItem from="1648628206088" duration="10328000" />
       <workItem from="1648803432447" duration="4481000" />
       <workItem from="1650199037022" duration="15838000" />
+      <workItem from="1650442365116" duration="1637000" />
+      <workItem from="1650444297552" duration="1564000" />
     </task>
     <servers />
   </component>
@@ -191,7 +134,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="NONE" type="UnityPausepointType">
           <url>file://$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs</url>
-          <line>172</line>
+          <line>194</line>
           <log-expression expression="(UnityEditor.EditorApplication.isPaused = true) ? &quot;Unity pausepoint hit. Pausing Unity editor at the end of frame&quot; : &quot;Unable to pause Unity editor&quot;" />
           <properties documentPath="C:\temp\ryan\Mystic-Factories\Assets\Resources\Code\Test\Generator.cs" initialLine="106" containingFunctionPresentation="method 'GenerateWorld'" />
           <option name="timeStamp" value="2" />

@@ -8,7 +8,7 @@ using UnityEngine.Tilemaps;
 
 namespace Resources.Code.Building {
     public class BuildSystem : MonoBehaviour {
-        public static BuildSystem current;
+        public static BuildSystem Current;
         
         public GridLayout gridLayout;
         private Grid grid;
@@ -21,15 +21,17 @@ namespace Resources.Code.Building {
         public PlaceableObject objectToPlace;
 
         private void Awake() {
-            current = this;
+            Current = this;
             grid = gridLayout.gameObject.GetComponent<Grid>();
         }
 
-        private static readonly Vector3 zero = new Vector3(0, 0, 10);
+        private static readonly Vector3 Zero = new Vector3(0, 0, 10);
 
         public static Vector3 GetMouseWorldPosition() {
             Vector3 vector = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            return Physics2D.OverlapPoint(vector) ? vector : zero;
+            vector.z = 10;
+            
+            return Physics2D.OverlapPoint(vector) ? vector : Zero;
         }
 
         public Vector3 SnapCoordinateToGrid(Vector3 position) {
@@ -38,7 +40,7 @@ namespace Resources.Code.Building {
             return position;
         }
 
-        private static TileBase[] GetTilesBlock(BoundsInt area, Tilemap tilemap) {
+        private static IEnumerable<TileBase> GetTilesBlock(BoundsInt area, Tilemap tilemap) {
             var array = new TileBase[area.size.x * area.size.y * area.size.z];
             int counter = 0;
 
@@ -62,10 +64,10 @@ namespace Resources.Code.Building {
         public bool CanBePlaced(PlaceableObject obj) {
             var area = new BoundsInt {
                                          position = gridLayout.WorldToCell(obj.GetStartPosition()),
-                                         size = new Vector3Int(obj.Size.x + 1, obj.Size.y + 1, 1)
+                                         size = new Vector3Int(1, obj.Size.x, obj.Size.y)
                                      };
 
-            TileBase[] baseArray = GetTilesBlock(area, mainTilemap);
+            IEnumerable<TileBase> baseArray = GetTilesBlock(area, mainTilemap);
             return baseArray.All(tile => tile != whiteTile);
         }
 

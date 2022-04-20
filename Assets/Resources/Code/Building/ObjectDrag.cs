@@ -1,31 +1,28 @@
+using System;
 using Resources.Code.UI;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
 namespace Resources.Code.Building {
-    public class ObjectDrag : MonoBehaviour, IMouse {
-        private Vector3 offset;
-
-        public void OnMouseDown(InputAction.CallbackContext ctx) {
-            offset = transform.position - BuildSystem.GetMouseWorldPosition();
+    public class ObjectDrag : MonoBehaviour {
+        private void Start() {
+            CameraMovement.MasterInput.Building.Place.performed += Place;
         }
-        public void OnMouseDrag(InputAction.CallbackContext ctx) {}
 
-        private void Update() {
-            Vector3 pos = BuildSystem.GetMouseWorldPosition() + offset;
-            transform.position = BuildSystem.current.SnapCoordinateToGrid(pos);
-
-            //TODO: Add input key for placing
-            PlaceableObject placeable = gameObject.GetComponent<PlaceableObject>();
-            if (BuildSystem.current.CanBePlaced(placeable)) {
+        private void Place(InputAction.CallbackContext ctx) {
+            PlaceableObject placeable = BuildSystem.Current.objectToPlace;
+            if (BuildSystem.Current.CanBePlaced(placeable)) {
                 placeable.Place();
-                Vector3Int start = BuildSystem.current.gridLayout.WorldToCell(placeable.GetStartPosition());
-                BuildSystem.current.TakeArea(start, placeable.Size);
+                Vector3Int start = BuildSystem.Current.gridLayout.WorldToCell(placeable.GetStartPosition());
+                BuildSystem.Current.TakeArea(start, placeable.Size);
             } else {
                 Destroy(gameObject);
-            } 
+            }
         }
 
-        public void OnMouseUp(InputAction.CallbackContext ctx) {}
+        private void Update() {
+            Vector3 pos = BuildSystem.GetMouseWorldPosition();
+            transform.position = BuildSystem.Current.SnapCoordinateToGrid(pos);
+        }
     }
 }

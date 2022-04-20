@@ -13,17 +13,19 @@ namespace Resources.Code {
         private void GetColliderVertexPositionsLocal() {
             BoxCollider2D box = gameObject.GetComponent<BoxCollider2D>();
             vertices = new Vector2[4];
-            vertices[0] = new Vector2(-box.size.x, -box.size.y) * 0.5f;
-            vertices[1] = new Vector2(box.size.x, -box.size.y) * 0.5f;
-            vertices[2] = new Vector2(box.size.x, box.size.y) * 0.5f;
-            vertices[4] = new Vector2(-box.size.x, box.size.y) * 0.5f;
+            
+            var size = box.size;
+            vertices[0] = new Vector2(-size.x, -size.y) * 0.5f;
+            vertices[1] = new Vector2(size.x, -size.y) * 0.5f;
+            vertices[2] = new Vector2(size.x, size.y) * 0.5f;
+            vertices[3] = new Vector2(-size.x, size.y) * 0.5f;
         }
 
         private void CalculateSizeInCells() {
             var vertices = new Vector2Int[this.vertices.Length];
             for (int index = 0; index < vertices.Length; index++) {
                 Vector2 worldPos = transform.TransformPoint(this.vertices[index]);
-                Vector3Int pos = BuildSystem.current.gridLayout.WorldToCell(worldPos);
+                Vector3Int pos = BuildSystem.Current.gridLayout.WorldToCell(worldPos);
                 vertices[index] = new Vector2Int(pos.x, pos.y);
             }
 
