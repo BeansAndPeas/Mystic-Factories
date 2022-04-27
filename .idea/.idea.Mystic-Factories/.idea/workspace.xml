@@ -6,16 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fbfa7e96-c1aa-4abd-83c9-d3b64611f811" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/InputSystem.inputsettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/MasterInput.inputactions" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/MasterInput.inputactions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/ObjectDrag.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/ObjectDrag.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/PlaceableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/PlaceableObject.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/MasterInput.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/MasterInput.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures/Test.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Structures/Test.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -105,6 +98,7 @@
       <workItem from="1650199037022" duration="15838000" />
       <workItem from="1650442365116" duration="1637000" />
       <workItem from="1650444297552" duration="1564000" />
+      <workItem from="1651064711748" duration="6828000" />
     </task>
     <servers />
   </component>

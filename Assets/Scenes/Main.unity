@@ -4613,8 +4613,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7fc38ea246a947f881e83de5cb26a3d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  width: 512
-  height: 512
+  width: 128
+  height: 128
   terrainOctaves: 6
   terrainFrequency: 1.25
   deepWater: 0.2

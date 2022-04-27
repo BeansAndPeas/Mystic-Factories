@@ -15,7 +15,6 @@ namespace Resources.Code.UI {
             buildMode.gameObject.SetActive(false);
             buildPanel.SetActive(true);
             BuildSystem.Current.Initialize(testPrefab);
-            Debug.Log("hi");
             CameraMovement.MasterInput.Building.Enable();
         }
 

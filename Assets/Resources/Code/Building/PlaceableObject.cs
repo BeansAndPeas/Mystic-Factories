@@ -11,14 +11,13 @@ namespace Resources.Code {
         private Vector2[] vertices;
 
         private void GetColliderVertexPositionsLocal() {
-            BoxCollider2D box = gameObject.GetComponent<BoxCollider2D>();
+            SpriteRenderer sprite = gameObject.GetComponent<SpriteRenderer>();
+            var rect = sprite.sprite.rect;
+            print(rect);
             vertices = new Vector2[4];
-            
-            var size = box.size;
-            vertices[0] = new Vector2(-size.x, -size.y) * 0.5f;
-            vertices[1] = new Vector2(size.x, -size.y) * 0.5f;
-            vertices[2] = new Vector2(size.x, size.y) * 0.5f;
-            vertices[3] = new Vector2(-size.x, size.y) * 0.5f;
+
+            float width = rect.width;
+            float height = rect.height;
         }
 
         private void CalculateSizeInCells() {
@@ -29,6 +28,8 @@ namespace Resources.Code {
                 vertices[index] = new Vector2Int(pos.x, pos.y);
             }
 
+            print(Math.Abs((vertices[0] - vertices[1]).x));
+            print(Math.Abs((vertices[0] - vertices[3]).y));
             Size = new Vector3Int(Math.Abs((vertices[0] - vertices[1]).x), Math.Abs((vertices[0] - vertices[3]).y), 1);
         }
 
