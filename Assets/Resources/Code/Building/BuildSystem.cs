@@ -1,78 +1,62 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
+using Resources.Code.Resources.Code.Building;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 namespace Resources.Code.Building {
     public class BuildSystem : MonoBehaviour {
-        public static BuildSystem Current;
-        
-        public GridLayout gridLayout;
-        private Grid grid;
+        public GameObject buildable;
         
         [SerializeField]
-        private Tilemap mainTilemap;
+        private Grid grid;
+        [SerializeField]
+        private Tilemap tilemap;
         [SerializeField]
         private TileBase whiteTile;
         
-        public PlaceableObject objectToPlace;
-
-        private void Awake() {
-            Current = this;
-            grid = gridLayout.gameObject.GetComponent<Grid>();
-        }
-
-        private static readonly Vector3 Zero = new Vector3(0, 0, 10);
-
-        public static Vector3 GetMouseWorldPosition() {
-            Vector3 vector = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
-            vector.z = 10;
+        public void SetObject(GameObject obj) {
+            if (buildable == null) return;
             
-            return Physics2D.OverlapPoint(vector) ? vector : Zero;
+            buildable = Instantiate(obj);
+            var draggable = buildable.AddComponent<DraggableObject>();
+            draggable.buildSystem = this;
         }
 
-        public Vector3 SnapCoordinateToGrid(Vector3 position) {
-            Vector3Int cellPos = gridLayout.WorldToCell(position);
-            position = grid.GetCellCenterWorld(cellPos);
-            return position;
+        public void Build() {
+            // divide position bu 0.16f to get the grid position
+            var pos = grid.WorldToCell(buildable.transform.position);
+            pos.x = Mathf.RoundToInt(pos.x / 0.16f);
+            pos.y = Mathf.RoundToInt(pos.y / 0.16f);
+            pos.z = 0;
+            
+            // get the size of the buildable's sprite
+            var sprite = buildable.GetComponent<SpriteRenderer>().sprite;
+            var size = new Vector2Int(sprite.texture.width, sprite.texture.height);
+            
+            // divide the size by 16f to get the grid size
+            size.x = Mathf.RoundToInt(size.x / 16f);
+            size.y = Mathf.RoundToInt(size.y / 16f);
+            
+            // check that all positions are valid
+            if (!CheckValidPositions(new Vector2Int(pos.x, pos.y), size)) return;
+            
+            // fill the tilemap with positions and size
+            tilemap.BoxFill(pos, whiteTile, pos.x, pos.y, pos.x + size.x, pos.y + size.y);
+            
+            // clone the buildable
+            var obj = Instantiate(buildable, transform.parent);
+            // set object position to the grid position
+            obj.transform.position = new Vector3(pos.x + size.x / 2, pos.y + size.y / 2, 0);
         }
-
-        private static IEnumerable<TileBase> GetTilesBlock(BoundsInt area, Tilemap tilemap) {
-            var array = new TileBase[area.size.x * area.size.y * area.size.z];
-            int counter = 0;
-
-            foreach (var position in area.allPositionsWithin) {
-                var pos = new Vector3Int(position.x, position.y, position.z);
-                array[counter++] = tilemap.GetTile(pos);
+        
+        // check that all positions are valid
+        private bool CheckValidPositions(Vector2Int pos, Vector2Int size) {
+            for (var x = pos.x; x < pos.x + size.x; x++) {
+                for (var y = pos.y; y < pos.y + size.y; y++) {
+                    if (tilemap.HasTile(new Vector3Int(x, y, 1))) return false;
+                }
             }
 
-            return array;
-        }
-
-        public void Initialize(GameObject prefab) {
-            Vector3 position = SnapCoordinateToGrid(Vector3.zero);
-            Debug.Log(position);
-            
-            GameObject obj = Instantiate(prefab, position, Quaternion.identity);
-            objectToPlace = obj.GetComponent<PlaceableObject>();
-            obj.AddComponent<ObjectDrag>();
-        }
-
-        public bool CanBePlaced(PlaceableObject obj) {
-            var area = new BoundsInt {
-                                         position = gridLayout.WorldToCell(obj.GetStartPosition()),
-                                         size = new Vector3Int(1, obj.Size.x, obj.Size.y)
-                                     };
-
-            IEnumerable<TileBase> baseArray = GetTilesBlock(area, mainTilemap);
-            return baseArray.All(tile => tile != whiteTile);
-        }
-
-        public void TakeArea(Vector3Int start, Vector3Int size) {
-            mainTilemap.BoxFill(start, whiteTile, start.x, start.y, start.x + size.x, start.y + size.y);
+            return true;
         }
     }
 }

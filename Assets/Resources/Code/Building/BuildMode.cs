@@ -10,11 +10,13 @@ namespace Resources.Code.UI {
         private GameObject buildPanel;
         [SerializeField]
         private GameObject testPrefab;
+        [SerializeField]
+        private BuildSystem buildSystem;
 
         public void Enable() {
             buildMode.gameObject.SetActive(false);
             buildPanel.SetActive(true);
-            BuildSystem.Current.Initialize(testPrefab);
+            buildSystem.SetObject(testPrefab);
             CameraMovement.MasterInput.Building.Enable();
         }
 
