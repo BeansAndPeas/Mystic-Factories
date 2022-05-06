@@ -1,10 +1,13 @@
+using System;
 using Resources.Code.Resources.Code.Building;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 
 namespace Resources.Code.Building {
     public class BuildSystem : MonoBehaviour {
-        public GameObject buildable;
+        private GameObject buildable;
+        private GameObject buildablePreview;
         
         [SerializeField]
         private Grid grid;
@@ -14,38 +17,71 @@ namespace Resources.Code.Building {
         private TileBase whiteTile;
         
         public void SetObject(GameObject obj) {
-            if (buildable == null) return;
-            
-            buildable = Instantiate(obj);
-            var draggable = buildable.AddComponent<DraggableObject>();
+            if (obj == null) return;
+
+            buildable = obj;
+            buildablePreview = Instantiate(obj);
+            var draggable = buildablePreview.AddComponent<DraggableObject>();
             draggable.buildSystem = this;
+            draggable.ready = true;
         }
 
-        public void Build() {
-            // divide position bu 0.16f to get the grid position
-            var pos = grid.WorldToCell(buildable.transform.position);
-            pos.x = Mathf.RoundToInt(pos.x / 0.16f);
-            pos.y = Mathf.RoundToInt(pos.y / 0.16f);
+        public static Vector3 GetPosition() {
+            var pos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
+            pos.x = RoundTo(pos.x, 0.16f);
+            pos.y = RoundTo(pos.y, 0.16f);
             pos.z = 0;
+            return pos;
+        }
+        
+        private static float RoundTo(float value, float multipleOf) {
+            return Mathf.Round(value/multipleOf) * multipleOf;
+        }
+
+        public bool Build() {
+            var obj = buildablePreview;
+            // divide position bu 0.16f to get the grid position
+            var pos = grid.WorldToCell(obj.transform.position);
+            pos.z = 1;
             
             // get the size of the buildable's sprite
-            var sprite = buildable.GetComponent<SpriteRenderer>().sprite;
+            var sprite = obj.GetComponent<SpriteRenderer>().sprite;
             var size = new Vector2Int(sprite.texture.width, sprite.texture.height);
             
             // divide the size by 16f to get the grid size
             size.x = Mathf.RoundToInt(size.x / 16f);
             size.y = Mathf.RoundToInt(size.y / 16f);
             
-            // check that all positions are valid
-            if (!CheckValidPositions(new Vector2Int(pos.x, pos.y), size)) return;
-            
             // fill the tilemap with positions and size
-            tilemap.BoxFill(pos, whiteTile, pos.x, pos.y, pos.x + size.x, pos.y + size.y);
+            int startX, startY, endX, endY;
+
+            if (pos.x < 0) {
+                startX = Mathf.FloorToInt(pos.x - size.x / 2f) - 1;
+                endX = Mathf.CeilToInt(pos.x + size.x / 2f) - 1;
+            } else {
+                startX = Mathf.FloorToInt(pos.x - size.x / 2f);
+                endX = Mathf.FloorToInt(pos.x + size.x / 2f);
+            }
+
+            if (pos.y < 0) {
+                startY = Mathf.CeilToInt(pos.y - size.y / 2f);
+                endY = Mathf.FloorToInt(pos.y + size.y / 2f);
+            } else {
+                startY = Mathf.FloorToInt(pos.y - size.y / 2f);
+                endY = Mathf.FloorToInt(pos.y + size.y / 2f);
+            }
             
-            // clone the buildable
-            var obj = Instantiate(buildable, transform.parent);
-            // set object position to the grid position
-            obj.transform.position = new Vector3(pos.x + size.x / 2, pos.y + size.y / 2, 0);
+            // check that all positions are valid
+            if (!CheckValidPositions(new Vector2Int(startX, startY), new Vector2Int(endX - startX, endY - startY))) return false;
+
+            tilemap.BoxFill(pos, whiteTile, startX, startY, endX, endY);
+            
+            buildablePreview = Instantiate(buildable);
+            var draggable = buildablePreview.AddComponent<DraggableObject>();
+            draggable.buildSystem = this;
+            StartCoroutine(draggable.Wait());
+            
+            return true;
         }
         
         // check that all positions are valid

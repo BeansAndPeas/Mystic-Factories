@@ -34,7 +34,7 @@ namespace Resources.Code {
 
                     Tile tile = TileColorCache[color];
                     GameObject tileObj = Instantiate(tilePrefab, transform);
-                    tileObj.transform.position = new Vector2(x * .16f - widthScaled, y * .16f - heightScaled);
+                    tileObj.transform.position = new Vector2(RoundTo(x * .16f, 0.16f) - widthScaled, RoundTo(y * .16f, 0.16f) - heightScaled);
                     
                     if (!TileSpriteCache.ContainsKey(tile)) {
                         TileSpriteCache.Add(tile, UnityEngine.Resources.Load<Sprite>("Textures/" + tile.Sprite));
@@ -64,5 +64,9 @@ namespace Resources.Code {
         }
 
         public GameObject GetTile(Vector2 pos) => GetTile((int) pos.x, (int) pos.y);
+        
+        private static float RoundTo(float value, float multipleOf) {
+            return Mathf.Round(value/multipleOf) * multipleOf;
+        }
     }
 }
