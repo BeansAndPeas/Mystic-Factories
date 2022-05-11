@@ -7,8 +7,8 @@ namespace Resources.Code.Resources.Code.Building {
     public class DraggableObject : MonoBehaviour {
         public BuildSystem buildSystem;
         private void Start() => CameraMovement.MasterInput.Building.Enable();
-        private bool built = false;
-        public bool ready = false;
+        private bool built;
+        public bool ready;
 
         public IEnumerator Wait() {
             yield return new WaitForSeconds(1f);

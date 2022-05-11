@@ -3639,7 +3639,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a02df347beec4064a8b149fcde257fe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buildable: {fileID: 7152689181199668839, guid: a56ea65332783d145b9ff6b5b4cc401d, type: 3}
   grid: {fileID: 1310618664}
   tilemap: {fileID: 1434225523}
   whiteTile: {fileID: 11400000, guid: 6365edde0c6af6840b5c47e777180a0b, type: 2}
@@ -4813,7 +4812,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buildMode: {fileID: 994144964}
   buildPanel: {fileID: 1960988401}
-  testPrefab: {fileID: 7152689181199668839, guid: a56ea65332783d145b9ff6b5b4cc401d, type: 3}
+  structures:
+  - {fileID: 7152689181199668839, guid: a56ea65332783d145b9ff6b5b4cc401d, type: 3}
+  - {fileID: 210657768591299523, guid: 3d621bb57506f9944bdbc2b5a28fbb5e, type: 3}
   buildSystem: {fileID: 1310618663}
 --- !u!114 &1740953029
 MonoBehaviour:
