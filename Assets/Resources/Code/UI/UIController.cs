@@ -45,13 +45,11 @@ namespace Resources.Code {
 
             yield return null;
 
-            StartCoroutine(generator.GenerateWorld(loadingBar));
-            yield return new WaitForSeconds(10f);
-            StartCoroutine(world.GenerateWorld(loadingBar));
+            StartCoroutine(generator.GenerateWorld(loadingBar, world));
         }
 
         private void Update() {
-            if (!loadPercentage.text.Equals("100%")) {
+            if (!FinishedGenerating) {  
                 loadPercentage.SetText(Math.Round(loadingBar.fillAmount * 100, 1) + "%");
             } else {
                 if (!loadingScreen.gameObject.activeSelf) return;

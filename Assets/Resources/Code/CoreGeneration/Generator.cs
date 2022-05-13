@@ -126,7 +126,7 @@ namespace Resources.Code.Test {
             seed = Random.Range(0, int.MaxValue);
         }
 
-        public IEnumerator GenerateWorld(Image loadingBar) {
+        public IEnumerator GenerateWorld(Image loadingBar, World world) {
             Initialize();
             loadingBar.fillAmount = 0.07f;
             yield return new WaitForSeconds(0.5f);
@@ -159,6 +159,8 @@ namespace Resources.Code.Test {
             yield return new WaitForSeconds(0.5f);
             biomeMapRenderer.materials[0].mainTexture = TextureGenerator.GetBiomeMapTexture(width, height, tiles);
             loadingBar.fillAmount = 0.2f;
+
+            StartCoroutine(world.GenerateWorld(loadingBar));
         }
 
         private void Initialize() {

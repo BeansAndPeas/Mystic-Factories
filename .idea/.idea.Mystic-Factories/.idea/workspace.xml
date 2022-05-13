@@ -5,10 +5,116 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fbfa7e96-c1aa-4abd-83c9-d3b64611f811" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Testing.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Testing/MeshTest.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Code/Testing/MeshTest.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Untitled.prefab" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Resources/Prefabs/Untitled.prefab.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Mystic-Factories/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Building/DraggableObject.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/Building/DraggableObject.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Cache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Cache.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Cache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Cache.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/CellularCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/CellularCache.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/CellularCache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/CellularCache.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/CellularGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/CellularGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/CellularGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/CellularGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/BasisType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/BasisType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/BasisType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/BasisType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/CombinerType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/CombinerType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/CombinerType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/CombinerType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/FractalType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/FractalType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/FractalType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/FractalType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/InterpolationType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/InterpolationType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/InterpolationType.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/InterpolationType.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/MappingMode.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/MappingMode.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Enums/MappingMode.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Enums/MappingMode.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitAutoCorrect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitAutoCorrect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitAutoCorrect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitAutoCorrect.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBasisFunction.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBasisFunction.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBasisFunction.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBasisFunction.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBias.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBias.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBias.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBias.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBlend.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBlend.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBlend.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBlend.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBrightContrast.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBrightContrast.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitBrightContrast.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitBrightContrast.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCache.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCache.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCache.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCache.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCeiling.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCeiling.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCeiling.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCeiling.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCellular.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCellular.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCellular.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCellular.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitClamp.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitClamp.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitClamp.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitClamp.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCombiner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCombiner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCombiner.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCombiner.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitConstant.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitConstant.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitConstant.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitConstant.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCos.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCos.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitCos.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitCos.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitFloor.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitFloor.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitFloor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitFloor.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitFractal.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitFractal.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitFractal.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitFractal.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitGain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitGain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitGain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitGain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitGradient.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitGradient.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitGradient.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitGradient.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitInvert.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitInvert.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitInvert.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitInvert.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitLog.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitLog.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitLog.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitLog.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitModuleBase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitModuleBase.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitModuleBase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitModuleBase.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitPow.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitPow.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitPow.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitPow.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitRotateDomain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitRotateDomain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitRotateDomain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitRotateDomain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitScaleDomain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitScaleDomain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitScaleDomain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitScaleDomain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitScaleOffset.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitScaleOffset.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitScaleOffset.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitScaleOffset.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitSelect.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitSelect.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitSelect.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitSelect.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitSin.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitSin.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitSin.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitSin.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitSphere.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitSphere.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitSphere.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitSphere.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitTan.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitTan.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitTan.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitTan.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitTiers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitTiers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitTiers.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitTiers.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitTranslatedDomain.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitTranslatedDomain.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Implicit/ImplicitTranslatedDomain.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Implicit/ImplicitTranslatedDomain.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Mapping.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Mapping.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Mapping.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Mapping.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/MappingRanges.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/MappingRanges.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/MappingRanges.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/MappingRanges.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Noise.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Noise.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/Noise.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/Noise.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/NoiseLookupTable.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/NoiseLookupTable.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/AccidentalNoise/NoiseLookupTable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/AccidentalNoise/NoiseLookupTable.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/Generator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/Generator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/MapData.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/MapData.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/MapData.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/MapData.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/MathHelper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/MathHelper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/MathHelper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/MathHelper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/TextureGenerator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/TextureGenerator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/TextureGenerator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/TextureGenerator.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/Tile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/Tile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/Tile.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/Tile.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/TileGroup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/TileGroup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/Test/TileGroup.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/TileGroup.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/UI/UIController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/UI/UIController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Code/World/World.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Code/World/World.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Resources/Textures/Resources/Untitled.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Textures/Resources/Untitled.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Main.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Main.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/RiderScriptEditorPersistedState.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -25,15 +131,15 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Code/Building/DraggableObject.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Resources/Code/Building/BuildSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/Image.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Plugins/UI/InputSystemUIInputModule.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputAction.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Resources/Code/Building/BuildMode.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/ExecuteEvents.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventSystem.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.inputsystem@1.0.2/InputSystem/Actions/InputActionState.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -58,7 +164,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="rider.run.widget.enabled.cache" value="false" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C#" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
@@ -72,10 +178,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1512">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="1512" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -111,6 +217,9 @@
       <workItem from="1651826151477" duration="14751000" />
       <workItem from="1652257185523" duration="3846000" />
       <workItem from="1652262910312" duration="11390000" />
+      <workItem from="1652429201225" duration="59000" />
+      <workItem from="1652429300940" duration="16471000" />
+      <workItem from="1652451725520" duration="376000" />
     </task>
     <servers />
   </component>
@@ -139,8 +248,8 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="NONE" type="UnityPausepointType">
-          <url>file://$PROJECT_DIR$/Assets/Resources/Code/Test/Generator.cs</url>
-          <line>194</line>
+          <url>file://$PROJECT_DIR$/Assets/Resources/Code/CoreGeneration/Generator.cs</url>
+          <line>196</line>
           <log-expression expression="(UnityEditor.EditorApplication.isPaused = true) ? &quot;Unity pausepoint hit. Pausing Unity editor at the end of frame&quot; : &quot;Unable to pause Unity editor&quot;" />
           <properties documentPath="C:\temp\ryan\Mystic-Factories\Assets\Resources\Code\Test\Generator.cs" initialLine="106" containingFunctionPresentation="method 'GenerateWorld'" />
           <option name="timeStamp" value="2" />

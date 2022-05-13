@@ -1,20 +1,31 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Resources.Code.Resources.Code.Testing;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 using UnityEngine.UI;
 
 namespace Resources.Code {
     public class World : MonoBehaviour {
         private readonly Dictionary<TilePos, GameObject> tiles = new Dictionary<TilePos, GameObject>();
+        private readonly Dictionary<Color, Tile> TileColorCache = new Dictionary<Color, Tile>();
+        private readonly Dictionary<Tile, Sprite> TileSpriteCache = new Dictionary<Tile, Sprite>();
+        
         [SerializeField]
         private MeshRenderer biomeMapRenderer;
         [SerializeField]
         private GameObject tilePrefab;
-        private readonly Dictionary<Color, Tile> TileColorCache = new Dictionary<Color, Tile>();
-        private readonly Dictionary<Tile, Sprite> TileSpriteCache = new Dictionary<Tile, Sprite>();
-
+        [SerializeField]
+        private Tilemap tilemap;
+        [SerializeField]
+        private TileBase whiteTile;
+        [SerializeField]
+        private GameObject orePrefab;
+        [SerializeField]
+        private MeshTest meshTest;
+        
         internal IEnumerator GenerateWorld(Image loadingBar) {
             var texture = biomeMapRenderer.material.mainTexture as Texture2D;
             var widthScaled = (int) ((texture.width / 2f) * 0.16f);
@@ -44,11 +55,50 @@ namespace Resources.Code {
                     
                     tileObj.name = tile.Name;
                     tiles.Add(new TilePos(x, y), tileObj);
-                    loadingBar.fillAmount = Mathf.Lerp(0.2f, 1f, complete++ / (texture.width * texture.height));
+                    loadingBar.fillAmount = Mathf.Lerp(0.2f, 0.8f, complete++ / (texture.width * texture.height));
                 }
             }
 
             biomeMapRenderer.gameObject.SetActive(false);
+            
+            StartCoroutine(GenerateOres(loadingBar, widthScaled, heightScaled));
+        }
+
+        private IEnumerator GenerateOres(Image loadingBar, int width, int height) {
+            // get a random number between 1/8th of the tile count and 1/4th of the tile count
+            var oreCount = Random.Range(tiles.Count / 64, tiles.Count / 48);
+            
+            int counter = 1;
+            
+            // loop through the orecount
+            for (var attempt = 0; attempt < oreCount; attempt++) {
+                yield return new WaitForSeconds(0.01f);
+                
+                // get a random position from the tiles dictionary's keys
+                var position = tiles.Keys.ElementAt(Random.Range(0, tiles.Keys.Count));
+                var tile = tiles[position];
+            
+                Vector3Int tilePos = tilemap.WorldToCell(new Vector3(RoundTo(position.X * .16f, 0.16f) - width, RoundTo(position.Y * .16f, 0.16f) - height, 1));
+                print(tilePos);
+                
+                // check if the tilemap has a tile at the position
+                if (tilemap.HasTile(new Vector3Int(tilePos.x, tilePos.y, 1)) || tile.GetComponent<SpriteRenderer>().sprite.name != "woodland") {
+                    continue;
+                }
+                
+                // set ore at position
+                tilemap.SetTile(new Vector3Int(tilePos.x, tilePos.y, 1), whiteTile);
+                
+                // create ore object
+                var ore = Instantiate(orePrefab, transform);
+                ore.transform.position = new Vector3(RoundTo(position.X * .16f, 0.16f) - width, RoundTo(position.Y * .16f, 0.16f) - height, 1);
+                ore.name = "Ore_" + counter++;
+                loadingBar.fillAmount = Mathf.Lerp(0.8f, 1.0f, (float) attempt / oreCount);
+            }
+            
+            loadingBar.fillAmount = 1.0f;
+            yield return new WaitForSeconds(1f);
+            meshTest.Init(tiles.Keys.ToArray());
             UIController.FinishedGenerating = true;
         }
 
