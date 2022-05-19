@@ -64,6 +64,10 @@ namespace Resources.Code {
             StartCoroutine(GenerateOres(loadingBar, widthScaled, heightScaled));
         }
 
+        public Tilemap GetTilemap() {
+            return tilemap;
+        }
+
         private IEnumerator GenerateOres(Image loadingBar, int width, int height) {
             // get a random number between 1/8th of the tile count and 1/4th of the tile count
             var oreCount = Random.Range(tiles.Count / 64, tiles.Count / 48);
