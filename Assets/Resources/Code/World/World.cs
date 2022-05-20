@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using Resources.Code.Objects;
 using Resources.Code.Resources.Code.Testing;
 using UnityEditor;
 using UnityEngine;
@@ -83,8 +84,7 @@ namespace Resources.Code {
                 var tile = tiles[position];
             
                 Vector3Int tilePos = tilemap.WorldToCell(new Vector3(RoundTo(position.X * .16f, 0.16f) - width, RoundTo(position.Y * .16f, 0.16f) - height, 1));
-                print(tilePos);
-                
+
                 // check if the tilemap has a tile at the position
                 if (tilemap.HasTile(new Vector3Int(tilePos.x, tilePos.y, 1)) || tile.GetComponent<SpriteRenderer>().sprite.name != "woodland") {
                     continue;
@@ -97,12 +97,13 @@ namespace Resources.Code {
                 var ore = Instantiate(orePrefab, transform);
                 ore.transform.position = new Vector3(RoundTo(position.X * .16f, 0.16f) - width, RoundTo(position.Y * .16f, 0.16f) - height, 1);
                 ore.name = "Ore_" + counter++;
+                ore.GetComponent<MineableOre>().tilemapPos = new Vector3Int(tilePos.x, tilePos.y, 1);
                 loadingBar.fillAmount = Mathf.Lerp(0.8f, 1.0f, (float) attempt / oreCount);
             }
             
             loadingBar.fillAmount = 1.0f;
             yield return new WaitForSeconds(1f);
-            meshTest.Init(tiles.Keys.ToArray());
+            // meshTest.Init(tiles.Keys.ToArray());
             UIController.FinishedGenerating = true;
         }
 

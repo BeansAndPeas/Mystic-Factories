@@ -3,11 +3,13 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Tilemaps;
 using static UnityEngine.Mathf;
+using Debug = System.Diagnostics.Debug;
 
 namespace Resources.Code.Building {
     public class BuildSystem : MonoBehaviour {
         private GameObject buildable;
         private GameObject buildablePreview;
+        public static GameObject testMachine;
         
         [SerializeField]
         private Grid grid;
@@ -31,6 +33,7 @@ namespace Resources.Code.Building {
         }
 
         public static Vector3 GetPosition() {
+            Debug.Assert(Camera.main != null, "Camera.main != null");
             Vector3 pos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
             pos.x = RoundTo(pos.x, 0.16f);
             pos.y = RoundTo(pos.y, 0.16f);
@@ -42,7 +45,7 @@ namespace Resources.Code.Building {
 
         public bool Build() {
             GameObject obj = buildablePreview;
-            // divide position bu 0.16f to get the grid position
+            // divide position by 0.16f to get the grid position
             Vector3Int pos = grid.WorldToCell(obj.transform.position);
             pos.z = 1;
             
@@ -53,18 +56,21 @@ namespace Resources.Code.Building {
             // divide the size by 16f to get the grid size
             size.x = RoundToInt(size.x / 16f);
             size.y = RoundToInt(size.y / 16f);
+            print(size);
             
             // setup bounds
-            var startX = FloorToInt(pos.x - size.x / 2);
-            var startY = CeilToInt(pos.y - size.y / 2);
-            var endX = pos.x < 0 ? CeilToInt(pos.x + size.x / 2) : FloorToInt(pos.x + size.x / 2);
-            var endY = pos.y < 0 ? CeilToInt(pos.y + size.y / 2) : FloorToInt(pos.y + size.y / 2);
+            var startX = FloorToInt(pos.x - size.x / 2f);
+            var endX = CeilToInt(pos.x + size.x / 2f);
+            
+            var startY = CeilToInt(pos.y + size.y / 2f);
+            var endY = FloorToInt(pos.y - size.y / 2f);
             
             // check that all positions are valid
             if (!CheckValidPositions(new Vector3Int(startX, startY, 1), new Vector3Int(endX, endY, 1))) return false;
 
+            print(startX + "\t" + endX + "\t" + startY + "\t" + endY);
             for (var x = startX; x < endX; x++) {
-                for (var y = startY; y < endY; y++) {
+                for (var y = endY; y < startY; y++) {
                     tilemap.SetTile(new Vector3Int(x, y, 1), whiteTile);
                 }
             }
@@ -79,8 +85,6 @@ namespace Resources.Code.Building {
         
         // check that all positions are valid
         private bool CheckValidPositions(Vector3Int start, Vector3Int end) {
-            print(start + "\t" + end);
-            
             for (var x = start.x; x < end.x; x++) {
                 for (var y = start.y; y < end.y; y++) {
                     if (tilemap.HasTile(new Vector3Int(x, y, 1))) return false;
