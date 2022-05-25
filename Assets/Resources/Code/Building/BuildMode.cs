@@ -30,6 +30,7 @@ namespace Resources.Code.UI {
         public void Disable() {
             buildMode.gameObject.SetActive(true);
             buildPanel.SetActive(false);
+            Destroy(buildSystem.GetPreview());
             CameraMovement.MasterInput.Building.Disable();
             isEnabled = false;
         }

@@ -9,7 +9,7 @@ namespace Resources.Code.Building {
     public class BuildSystem : MonoBehaviour {
         private GameObject buildable;
         private GameObject buildablePreview;
-        public static GameObject testMachine;
+        public static GameObject TestMachine;
         
         [SerializeField]
         private Grid grid;
@@ -19,6 +19,7 @@ namespace Resources.Code.Building {
         private TileBase whiteTile;
 
         public GameObject GetObject() => buildable;
+        public GameObject GetPreview() => buildablePreview;
 
         public void SetObject(GameObject obj) {
             if (obj == null) return;
