@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b6b889bce8b43baa49029239b02115d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ingotPrefab: {fileID: 5333566620709892264, guid: 33b5a554daab5824791b1416ae7b0c5c, type: 3}
 --- !u!61 &-6398310968806848057
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -107,7 +108,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.006520897, y: 0.0004075691}

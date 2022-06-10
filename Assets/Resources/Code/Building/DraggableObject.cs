@@ -22,7 +22,9 @@ namespace Resources.Code.Resources.Code.Building {
             
             if (!ready || !(CameraMovement.MasterInput.Building.Place.ReadValue<float>() > 0)) return;
 
-            built = buildSystem.Build();
+            if (buildSystem.Build()) {
+                Destroy(this);
+            }
         }
     }
 }

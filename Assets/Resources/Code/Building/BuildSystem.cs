@@ -69,7 +69,6 @@ namespace Resources.Code.Building {
             // check that all positions are valid
             if (!CheckValidPositions(new Vector3Int(startX, startY, 1), new Vector3Int(endX, endY, 1))) return false;
 
-            print(startX + "\t" + endX + "\t" + startY + "\t" + endY);
             for (var x = startX; x < endX; x++) {
                 for (var y = endY; y < startY; y++) {
                     tilemap.SetTile(new Vector3Int(x, y, 1), whiteTile);
